@@ -1,1 +1,1 @@
-The Rust Programming Language - Steve Klabnik and Carol Nichols
+The Rust Programming Language by Steve Klabnik and Carol Nichols
