@@ -12,25 +12,31 @@ fn main() {
 
     let mut s2 = String::from("hello world");
 
-    let word_slice = first_word_slice(&s2); // word will get the value 5
+    let word_slice = first_word_string(&s2); // word will get the value 5
+
+    println!("s2: {}", s2);
+    println!("&s2: {}", &s2);
+    println!("word_slice: {}", word_slice);
+    println!("&word_slice: {}", &word_slice);
 
     // s2.clear(); this empty the String, making it equal to ""
 
     println!("The first word_slice is: {word_slice}");
 
     let my_string = String::from("hello world");
+    let word: &str = first_word_string(&my_string);
 
-    // first_word works on slices of String, whether partial or whole
+    // first_word_slice_str works on slices of String, whether partial or whole
     let word = first_word_slice_str(&my_string[0..6]);
     let word = first_word_slice_str(&my_string[..]);
 
-    // first_word also works on references to String, which is equivalent
+    // first_word_slice_str also works on references to String, which is equivalent
     // to the whole slices of String
     let word = first_word_slice_str(&my_string);
 
     let my_string_literal = "hello world";
 
-    // first_word works on slices of string literals, whether partial or whole
+    // first_word_slice_str works on slices of string literals, whether partial or whole
     let word = first_word_slice_str(&my_string_literal[0..6]);
     let word = first_word_slice_str(&my_string_literal[..]);
 
@@ -49,7 +55,7 @@ fn first_word(s: &String) -> usize {
     s.len()
 }
 
-fn first_word_slice(s: &String) -> &str {
+fn first_word_string(s: &String) -> &str {
     let bytes = s.as_bytes();
     for (i, &item) in bytes.iter().enumerate() {
         if item == b' ' {
