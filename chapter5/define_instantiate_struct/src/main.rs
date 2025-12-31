@@ -80,6 +80,6 @@ fn main() {
     let NormalStruct { a: x, b: y } = ns;
     println!("a is: {}, b: {}", x, y);
 
-    let birthYear = BirthYear(1970);
-    println!("birthYear is: {}", birthYear.0);
+    let birth_year = BirthYear(1970);
+    println!("birth_year is: {}", birth_year.0);
 }
