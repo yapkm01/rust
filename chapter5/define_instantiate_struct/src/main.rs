@@ -19,6 +19,8 @@ struct NormalStruct {
     b: i32,
 }
 
+struct AlwaysEqual;
+
 fn build_user(username: String, email: String) -> User {
     User {
         active: true,
@@ -82,4 +84,6 @@ fn main() {
 
     let birth_year = BirthYear(1970);
     println!("birth_year is: {}", birth_year.0);
+
+    let subject: AlwaysEqual = AlwaysEqual;
 }

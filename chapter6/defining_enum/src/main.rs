@@ -33,4 +33,12 @@ fn main() {
 
     let m = Message::Write(String::from("hello"));
     m.call();
+
+    let some_number: Option<i32> = Some(5);
+    let some_char: Option<char> = Some('e');
+    let absent_number: Option <i32> = None;
+
+    println!("some_number is: {:?}", some_number.unwrap());
+    println!("some_char is: {:?}", some_char.unwrap());
+    println!("absent_number is: {:?}", absent_number);
 }
